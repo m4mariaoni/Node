@@ -1,0 +1,1 @@
+const message = ['wake up', 'check the phone', 'pray', 'go to bathroom', 'eat', 'setup for the day'];
