@@ -12,7 +12,7 @@
                 <li><a href="#aboutme">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li>Contact</li>
+                <li><a href="./contact.html">Contact</a></li>
             </ul>
         </nav>
         <main>
@@ -37,36 +37,36 @@
                       </p>
                       <p>
                         Fun fact! I've been programing for
-                        <span id="time-container">0</span> seconds!
+                        <span id="timer">0</span> seconds!
                       </p>
                     </div>
                 </div>
                 <div class="right">
-                    <img src="ada.jpeg" alt="Photo of Ada Lovelace">
+                    <img src="./images/ada.jpeg" alt="Photo of Ada Lovelace">
                 </div>
             </section>
             <section id="projects">
                 <h2>Projects</h2>
                 <details>
                     <summary>The first computer program</summary>
-                    <img src="220px-Diagram_for_the_computation_of_Bernoulli_numbers.jpg" alt="Diagram_for_the_computation_of_Bernoulli_numbers Photo">
+                    <img src="./images/220px-Diagram_for_the_computation_of_Bernoulli_numbers.jpg" alt="Diagram_for_the_computation_of_Bernoulli_numbers Photo">
                     <p>The world's first computer program for computing Bernoulli numbers.</p>
                 </details>
                 <details>
                     <summary>The Analytical Engine</summary>
-                    <img src="analyticalmachine_babbage_london.png" alt="Analytical machine babbage london Photo">
+                    <img src="./images/analyticalmachine_babbage_london.png" alt="Analytical machine babbage london Photo">
                     <p> I helped Charles Babbage on topics ranging from math to computation that helped the development of the Analytical Engine.</p>
                 </details>
                 <details>
                     <summary>The Ada programming language</summary>
-                    <img src="220px-Ada_Mascot_with_slogan.svg.png" alt="Ada Mascot with slogan logo">
+                    <img src="./images/220px-Ada_Mascot_with_slogan.svg.png" alt="Ada Mascot with slogan logo">
                     <p>The world's first computer program for computing Bernoulli numbers. My work inspired the United States Department of Defense to name
                         their new programming language after me.</p>
                 </details>
             </section>
             <section id="skills">
                 <h2>Skills</h2>
-                <ul>
+                <ul class="ficons">
                     <li><i class="fa-brands fa-html5 fa-2x"></i></li>
                     <li><i class="fa-brands fa-css3-alt fa-2x"></i></li>
                     <li><i class="fa-brands fa-js fa-2x"></i></li>
@@ -88,4 +88,25 @@
             <p>Made with <i class="fa-solid fa-heart"></i>  in London</p>
         </footer>
     </body>
+    <script>
+        const timer = document.getElementById("timer");
+        const intlNumberFormatter = new Intl.NumberFormat("en-US");
+        const birthDate = new Date("12-10-1815");
+
+        function updateTime() {
+            // Get the current time
+            const now = new Date();
+
+            // Calculate the time difference in seconds
+            const differenceInSeconds = Math.floor((now.getTime() - birthDate.getTime()) / 1000);
+
+            // Format the time difference and display it
+            timer.innerHTML = intlNumberFormatter.format(differenceInSeconds) + " seconds";
+        }
+
+        updateTime();
+        // Run the update function every second (1000 milliseconds)
+        setInterval(updateTime, 1000); 
+
+    </script>
 </html>

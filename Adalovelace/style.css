@@ -47,11 +47,11 @@ summary{
     clear: both;
     padding:5px 0 15px 0;
 }
-#skills ul{
+ul.ficons{
     margin: 0; 
     padding: 0;
 }
-#skills li{
+.ficons li{
     list-style: none;
     padding-right: 30px;
     float:left;
@@ -59,4 +59,7 @@ summary{
 footer{
     margin-top: 10px;
     text-align: center;
+}
+footer i{
+    color: red;
 }
